@@ -4,15 +4,11 @@ function initExpandingCards() {
   if (cards.length) {
     cards[0].classList.add("active");
     function expandingCard(event) {
-      cards.forEach((card) => {
-        card.classList.remove("active");
-      });
+      cards.forEach((card) => card.classList.remove("active"));
       this.classList.add("active");
     }
 
-    cards.forEach((card) => {
-      card.addEventListener("click", expandingCard);
-    });
+    cards.forEach((card) => card.addEventListener("click", expandingCard));
   }
 }
 
